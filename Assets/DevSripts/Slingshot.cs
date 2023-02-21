@@ -15,8 +15,11 @@ public class Slingshot : MonoBehaviour
     public GameObject pelletPrefab;
     public float pelletPositionOffset;
 
-    Rigidbody2D pellet;
-    Collider2D pelletCollider;
+    public float force;
+
+    public Rigidbody2D pellet;
+    public Collider2D pelletCollider;
+
     // Start is called before the first frame update
     // Sets the position of the line strips
     void Start()
@@ -63,6 +66,18 @@ public class Slingshot : MonoBehaviour
     private void OnMouseUp()
     {
         isMouseDown = false;
+        Shoot();
+    }
+
+    // This causes the pellet to be thrown after letting go of slingshot, another pellet respawns at slingshot
+    void Shoot()
+    {
+        Vector3 pelletForce = (currentPosition - center.position) * force * -1;
+        pellet.velocity = pelletForce;
+
+        pellet = null;
+        pelletCollider = null;
+        Invoke("CreatePellet", 2);
     }
 
     void ResetStrips()
