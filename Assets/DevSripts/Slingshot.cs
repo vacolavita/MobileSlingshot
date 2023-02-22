@@ -36,7 +36,7 @@ public class Slingshot : MonoBehaviour
     {
         pellet = Instantiate(pelletPrefab).GetComponent<Rigidbody2D>();
         pelletCollider = pellet.GetComponent<Collider2D>();
-        pelletCollider.enabled = false;
+        pelletCollider.enabled = true;
 
     }
     // Update is called once per frame
