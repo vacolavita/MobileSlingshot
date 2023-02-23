@@ -19,7 +19,7 @@ public class spawnBullet : MonoBehaviour
 
             t_script.setLaunch(transform.rotation.eulerAngles.z, Random.Range(0, 15));
 
-            t_script.Launch();
+            //t_script.Launch();
         }
 
     }

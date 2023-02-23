@@ -28,9 +28,9 @@ public class PelletForward : MonoBehaviour
         Debug.Log(direction);
     }
 
-    public void Launch()
+    public void Launch(Vector3 force)
     {
-        rb.velocity = direction.normalized * speed;
+        rb.velocity = force;
 
         enabled = true;
     }

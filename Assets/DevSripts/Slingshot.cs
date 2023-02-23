@@ -30,6 +30,8 @@ public class Slingshot : MonoBehaviour
         lineRenderers[1].SetPosition(0, stripPositions[1].position);
 
         CreatePellet();
+
+        center.position = (stripPositions[0].position + stripPositions[1].position) / 2;
     }
 
     void CreatePellet()
@@ -72,8 +74,10 @@ public class Slingshot : MonoBehaviour
     // This causes the pellet to be thrown after letting go of slingshot, another pellet respawns at slingshot
     void Shoot()
     {
+
         Vector3 pelletForce = (currentPosition - center.position) * force * -1;
-        pellet.velocity = pelletForce;
+
+        pellet.GetComponent<PelletForward>().Launch(pelletForce);
 
         pellet = null;
         pelletCollider = null;
