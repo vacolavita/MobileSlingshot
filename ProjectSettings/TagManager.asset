@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Breakable
   - BreaksWalls
+  - Pellet
+  - Sticky
+  - Bouncy
   layers:
   - Default
   - TransparentFX
