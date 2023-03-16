@@ -17,10 +17,15 @@ public class PelletForward : MonoBehaviour
 
 
     //This seems useless
-    public void setLaunch(float rot)
+    public void setLaunch(Transform rot)
     {
-        transform.rotation = Quaternion.Euler(0, 0, rot);
-        Debug.Log("Launch being set");
+        transform.LookAt(rot, Vector3.left);
+        transform.Rotate(Vector3.up, 90, Space.Self);
+        transform.Rotate(Vector3.forward, 90, Space.Self);
+
+        transform.rotation.Set(0, 0, transform.rotation.z, transform.rotation.w);
+
+        //transform.rotation = Quaternion.Euler(0, 0, transform.rotation.z);
     }
 
     public virtual void Launch(Vector3 force)
