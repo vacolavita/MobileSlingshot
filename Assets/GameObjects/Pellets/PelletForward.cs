@@ -19,8 +19,8 @@ public class PelletForward : MonoBehaviour
     //This seems useless
     public virtual void setLaunch(float rot)
     {
-        transform.rotation = new Quaternion(0, 0, Mathf.Deg2Rad * rot, 0);
-
+        transform.Rotate(Vector3.forward, rot);
+        Debug.Log("Launch being set");
     }
 
     public virtual void Launch(Vector3 force)
