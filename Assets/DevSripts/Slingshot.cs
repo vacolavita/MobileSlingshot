@@ -74,8 +74,8 @@ public class Slingshot : MonoBehaviour
 
 
             //Added by Alex. Need to get SetLaunch working to make triple pellets work.
-            pelletPrefab.GetComponent<PelletForward>().setLaunch(Vector3.Angle(mousePosition, center.position));
-            Debug.Log(Vector3.Angle(mousePosition, center.position));
+            Debug.Log(Vector3.Angle(pellet.position, center.position));
+            pelletPrefab.GetComponent<PelletForward>().setLaunch(Vector3.Angle(pellet.position, center.position));
 
             SetStrips(currentPosition);
         }

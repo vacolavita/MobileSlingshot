@@ -19,10 +19,7 @@ public class PelletForward : MonoBehaviour
     //This seems useless
     public virtual void setLaunch(float rot)
     {
-        //direction.y = Mathf.Sin(Mathf.Deg2Rad * rot * Mathf.PI);
-        //direction.x = Mathf.Cos(Mathf.Deg2Rad * rot * Mathf.PI);
-
-        transform.rotation = Quaternion.Euler(0, 0, rot);
+        transform.rotation = new Quaternion(0, 0, Mathf.Deg2Rad * rot, 0);
 
     }
 
