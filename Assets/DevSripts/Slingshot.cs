@@ -52,6 +52,12 @@ public class Slingshot : MonoBehaviour
 
             currentPosition = Camera.main.ScreenToWorldPoint(mousePosition);
             currentPosition = center.position + Vector3.ClampMagnitude(currentPosition - center.position, maxLength); // This creates a limited distance of how far you can drag the strip
+
+
+            //Added by Alex. Need to get SetLaunch working to make triple pellets work.
+            pelletPrefab.GetComponent<PelletForward>().setLaunch(Vector3.Angle(mousePosition, center.position));
+            Debug.Log(Vector3.Angle(mousePosition, center.position));
+            
             SetStrips(currentPosition);
         }
         else

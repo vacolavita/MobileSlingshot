@@ -17,7 +17,7 @@ public class spawnBullet : MonoBehaviour
             GameObject t_bullet = Instantiate(bullet, gameObject.transform.position, gameObject.transform.rotation);
             PelletForward t_script = t_bullet.GetComponent<PelletForward>();
 
-            t_script.setLaunch(transform.rotation.eulerAngles.z, Random.Range(0, 15));
+            t_script.setLaunch(transform.rotation.eulerAngles.z);
 
             //t_script.Launch();
         }

@@ -13,34 +13,30 @@ public class PelletForward : MonoBehaviour
     private float
         speed;
 
-    public float delete_Range;
-
     // Start is called before the first frame update
 
-    public void setLaunch(float rot, float strength)
+
+    //This seems useless
+    public virtual void setLaunch(float rot)
     {
-        direction.y = Mathf.Sin(Mathf.Deg2Rad * rot * Mathf.PI);
-        direction.x = Mathf.Cos(Mathf.Deg2Rad * rot * Mathf.PI);
+        //direction.y = Mathf.Sin(Mathf.Deg2Rad * rot * Mathf.PI);
+        //direction.x = Mathf.Cos(Mathf.Deg2Rad * rot * Mathf.PI);
 
-        speed = strength;
+        transform.rotation = Quaternion.Euler(0, 0, rot);
 
-        Debug.Log(rot);
-        Debug.Log(direction);
     }
 
-    public void Launch(Vector3 force)
+    public virtual void Launch(Vector3 force)
     {
         rb.velocity = force;
 
         enabled = true;
+
+        Debug.Log("Note for Alex: setLaunch seems obsolete consider deleting / repurposing it");
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (rb.velocity.magnitude <= delete_Range)
-        {
-            Destroy(gameObject);
-        }
     }
 }
