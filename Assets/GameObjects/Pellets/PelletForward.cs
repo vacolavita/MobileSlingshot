@@ -31,8 +31,6 @@ public class PelletForward : MonoBehaviour
         rb.velocity = force;
 
         enabled = true;
-
-        Debug.Log("Note for Alex: setLaunch seems obsolete consider deleting / repurposing it");
     }
 
     // Update is called once per frame

@@ -25,7 +25,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3005361696907939757, guid: cfdf2c3c6f9889d4aa016e2ca11948b0, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.08834152
       objectReference: {fileID: 0}
     - target: {fileID: 3005361696907939757, guid: cfdf2c3c6f9889d4aa016e2ca11948b0, type: 3}
       propertyPath: m_LocalRotation.x
@@ -37,7 +37,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3005361696907939757, guid: cfdf2c3c6f9889d4aa016e2ca11948b0, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 0.9960903
       objectReference: {fileID: 0}
     - target: {fileID: 3005361696907939757, guid: cfdf2c3c6f9889d4aa016e2ca11948b0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -56,9 +56,9 @@ PrefabInstance:
       value: Triple_Pellet
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 2200444383714921934, guid: cfdf2c3c6f9889d4aa016e2ca11948b0, type: 3}
     - {fileID: 7138777603863672784, guid: cfdf2c3c6f9889d4aa016e2ca11948b0, type: 3}
     - {fileID: 4494734840233441990, guid: cfdf2c3c6f9889d4aa016e2ca11948b0, type: 3}
+    - {fileID: 2200444383714921934, guid: cfdf2c3c6f9889d4aa016e2ca11948b0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: cfdf2c3c6f9889d4aa016e2ca11948b0, type: 3}
 --- !u!1 &2728345291837751796 stripped
 GameObject:

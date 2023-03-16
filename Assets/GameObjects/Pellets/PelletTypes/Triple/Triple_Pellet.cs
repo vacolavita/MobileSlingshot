@@ -11,20 +11,15 @@ public class Triple_Pellet : PelletForward
 
     public override void Launch(Vector3 force)
     {
-        Debug.Log(transform.rotation.z);
-        float firstAngle = (Mathf.Rad2Deg * transform.rotation.z) - ((SEGMENTS / 2) * spreadAngle);
-
-
-        transform.rotation = Quaternion.Euler(0, 0, firstAngle);
+        float firstAngle = -spreadAngle;
 
         for(int i = 0; i < SEGMENTS; i++)
         {
             GameObject temp = Instantiate(splitPellet, transform.position, transform.rotation);
-            
-            temp.transform.Translate(Vector3.forward * 2);
-            transform.Rotate(0, 0, firstAngle);
 
-            temp.GetComponent<PelletForward>().Launch(force);
+            temp.GetComponent<PelletForward>().Launch(Quaternion.AngleAxis(firstAngle, Vector3.forward) * force);
+
+            firstAngle += spreadAngle;
         }
 
         Destroy(gameObject);
