@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 104098918781798206}
   - component: {fileID: 4494734840233441990}
   - component: {fileID: 3573576203889634663}
-  - component: {fileID: 7138777603863672784}
   - component: {fileID: 2200444383714921934}
+  - component: {fileID: 6384922110595226111}
   m_Layer: 0
   m_Name: Standard
   m_TagString: BreaksWalls
@@ -29,7 +29,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8414396859242041881}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.80353934, w: 0.59525174}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_ConstrainProportionsScale: 0
@@ -140,19 +140,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!114 &7138777603863672784
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8414396859242041881}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e0fb4ddd7f413b40b67dedecf297089, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 0}
 --- !u!114 &2200444383714921934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,3 +153,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   threshold: 0.1
+--- !u!114 &6384922110595226111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8414396859242041881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b01f2416d6810349a383e2107c4196b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pushable: 1
+  evil: 0
+  breakable: 0
+  invincible: 0
+  bounciness: 1
