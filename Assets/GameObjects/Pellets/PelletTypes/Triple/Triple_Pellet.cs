@@ -9,18 +9,63 @@ public class Triple_Pellet : PelletForward
 
     public GameObject splitPellet;
 
+
+    //I think I see the problem: When you're aiming left, the X axis of the pellet is
+    //pointed in the CORRECT direction,
+    //but when aiming RIGHT, the X axis of the pellet is facing the WRONG direction
+
+    
     public override void Launch(Vector3 force)
     {
-        float firstAngle = -spreadAngle;
+        float tempAngle = -spreadAngle * SEGMENTS / 2;
 
-        for(int i = 0; i < SEGMENTS; i++)
+        //Given how we're using lookat to control the rotation of the sprite, an overcomplicated solution
+        //was needed to account for the overcomplicated setup and compensation revolved around correcting
+        //the rotation of the sprite.
+
+        //If you are aiming LEFT, spawn the balls from LEFT to RIGHT
+        if (transform.position.x > toCenter.x)
         {
-            GameObject temp = Instantiate(splitPellet, transform.position, transform.rotation);
+            Debug.Log("Aiming LEFT");
 
-            temp.GetComponent<PelletForward>().Launch(Quaternion.AngleAxis(firstAngle, Vector3.forward) * force);
+            transform.Rotate(Vector3.forward, -spreadAngle);
 
-            firstAngle += spreadAngle;
+            for (int i = 0; i < SEGMENTS; i++)
+            {
+                GameObject temp = Instantiate(splitPellet, transform.position, transform.rotation);
+                temp.transform.Translate(Vector3.up, Space.Self);
+
+                transform.Rotate(Vector3.forward, spreadAngle);
+
+
+                Vector3 forceDirection = Quaternion.AngleAxis(tempAngle, Vector3.forward) * force;
+                temp.GetComponent<PelletForward>().Launch(forceDirection);
+
+                tempAngle += spreadAngle;
+            }
         }
+        //if you are aiming RIGHT, spawn the pellets from RIGHT to LEFT
+        else
+        {
+            Debug.Log("Aiming RIGHT");
+
+            transform.Rotate(Vector3.forward, spreadAngle);
+
+            for (int i = 0; i < SEGMENTS; i++)
+            {
+                GameObject temp = Instantiate(splitPellet, transform.position, transform.rotation);
+                temp.transform.Translate(Vector3.up, Space.Self);
+
+                transform.Rotate(Vector3.forward, -spreadAngle);
+
+                Vector3 forceDirection = Quaternion.AngleAxis(tempAngle, Vector3.forward) * force;
+                temp.GetComponent<PelletForward>().Launch(forceDirection);
+
+                tempAngle += spreadAngle;
+            }
+
+        }
+        
 
         Destroy(gameObject);
     }
