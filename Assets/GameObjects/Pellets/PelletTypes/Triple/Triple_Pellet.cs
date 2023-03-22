@@ -17,7 +17,8 @@ public class Triple_Pellet : PelletForward
     
     public override void Launch(Vector3 force)
     {
-        float tempAngle = -spreadAngle * SEGMENTS / 2;
+        int clutch = SEGMENTS / 2;
+        float tempAngle = -spreadAngle * clutch;
 
         //Given how we're using lookat to control the rotation of the sprite, an overcomplicated solution
         //was needed to account for the overcomplicated setup and compensation revolved around correcting
