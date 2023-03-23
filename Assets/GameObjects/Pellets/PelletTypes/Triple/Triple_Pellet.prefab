@@ -7,9 +7,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 104098918781798206, guid: cfdf2c3c6f9889d4aa016e2ca11948b0, type: 3}
+      propertyPath: m_Radius
+      value: 1.76
+      objectReference: {fileID: 0}
     - target: {fileID: 3005361696907939757, guid: cfdf2c3c6f9889d4aa016e2ca11948b0, type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3005361696907939757, guid: cfdf2c3c6f9889d4aa016e2ca11948b0, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3005361696907939757, guid: cfdf2c3c6f9889d4aa016e2ca11948b0, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3005361696907939757, guid: cfdf2c3c6f9889d4aa016e2ca11948b0, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3005361696907939757, guid: cfdf2c3c6f9889d4aa016e2ca11948b0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -49,6 +65,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3005361696907939757, guid: cfdf2c3c6f9889d4aa016e2ca11948b0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3105888664371651174, guid: cfdf2c3c6f9889d4aa016e2ca11948b0, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3105888664371651174, guid: cfdf2c3c6f9889d4aa016e2ca11948b0, type: 3}
+      propertyPath: m_FlipY
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3105888664371651174, guid: cfdf2c3c6f9889d4aa016e2ca11948b0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6a9f3e50fbfbfcd419fdf1f6d4513c99, type: 3}
+    - target: {fileID: 3105888664371651174, guid: cfdf2c3c6f9889d4aa016e2ca11948b0, type: 3}
+      propertyPath: m_SpriteSortPoint
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8414396859242041881, guid: cfdf2c3c6f9889d4aa016e2ca11948b0, type: 3}
