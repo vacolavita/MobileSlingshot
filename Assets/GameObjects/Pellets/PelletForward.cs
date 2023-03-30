@@ -37,6 +37,9 @@ public class PelletForward : MonoBehaviour
         rb.velocity = force;
 
         enabled = true;
+        TrailRenderer tr = GetComponent<TrailRenderer>();
+        if(tr != null)
+            tr.enabled = true;
     }
 
     // Update is called once per frame
