@@ -112,7 +112,7 @@ MonoBehaviour:
   direction: {x: 0, y: 0}
   rb: {fileID: 6957800107344461450}
   SEGMENTS: 3
-  spreadAngle: 30
+  spreadAngle: 15
   splitPellet: {fileID: 588745191985991671, guid: 87765afbab1c6a847985f60c1779b359, type: 3}
 --- !u!50 &6957800107344461450 stripped
 Rigidbody2D:
