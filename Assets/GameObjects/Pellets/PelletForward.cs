@@ -40,6 +40,12 @@ public class PelletForward : MonoBehaviour
         TrailRenderer tr = GetComponent<TrailRenderer>();
         if(tr != null)
             tr.enabled = true;
+        
+        GameObject slingsound = GameObject.Find("SlingshotSound");
+        if (slingsound != null) {
+            AudioSource sound = slingsound.GetComponent<AudioSource>();
+            sound.Play();
+        }
     }
 
     // Update is called once per frame

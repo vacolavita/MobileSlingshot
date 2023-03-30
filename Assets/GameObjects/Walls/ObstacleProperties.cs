@@ -54,7 +54,21 @@ public class ObstacleProperties : MonoBehaviour
             if (properties != null && !invincible) {
                 if (properties.evil || breakable) {
                     Destroy(gameObject);
+
+                    GameObject breaksound = GameObject.Find("Break");
+                    if (breaksound != null)
+                    {
+                        AudioSource sound = breaksound.GetComponent<AudioSource>();
+                        sound.Play();
+                    }
                 }
+            }
+
+            GameObject hitsound = GameObject.Find("Hit");
+            if (hitsound != null)
+            {
+                AudioSource sound = hitsound.GetComponent<AudioSource>();
+                sound.Play();
             }
         }
     }
