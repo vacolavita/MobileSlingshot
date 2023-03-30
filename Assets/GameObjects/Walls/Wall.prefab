@@ -13,8 +13,6 @@ GameObject:
   - component: {fileID: 5294213620633897262}
   - component: {fileID: 8443157591728110226}
   - component: {fileID: -8335634108005775848}
-  - component: {fileID: 7474512440363488123}
-  - component: {fileID: 5226558869495450934}
   m_Layer: 0
   m_Name: Wall
   m_TagString: Untagged
@@ -153,29 +151,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!114 &7474512440363488123
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3363408039851150657}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18d585f9ca704aa498dc5867da231782, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anchorType: 0
-  anchorOffset: {x: 0, y: 0, z: 0}
---- !u!114 &5226558869495450934
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3363408039851150657}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ea3de92d77abbd4ab9c2af5e302f2aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
