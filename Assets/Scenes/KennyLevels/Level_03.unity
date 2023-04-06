@@ -448,7 +448,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6460096087854884506, guid: bc31c04df7ec327488475874b2fa38b8, type: 3}
       propertyPath: m_LocalScale.x
-      value: 5.9406877
+      value: 3.7129297
       objectReference: {fileID: 0}
     - target: {fileID: 6460096087854884506, guid: bc31c04df7ec327488475874b2fa38b8, type: 3}
       propertyPath: m_LocalScale.y
@@ -456,7 +456,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6460096087854884506, guid: bc31c04df7ec327488475874b2fa38b8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.1
+      value: -1.102
       objectReference: {fileID: 0}
     - target: {fileID: 6460096087854884506, guid: bc31c04df7ec327488475874b2fa38b8, type: 3}
       propertyPath: m_LocalPosition.y
@@ -624,6 +624,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2842597522020572900, guid: 51ea7b9fafed23543a638700f623a1a5, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 18.03003
+      objectReference: {fileID: 0}
+    - target: {fileID: 2842597522256363676, guid: 51ea7b9fafed23543a638700f623a1a5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 60917198}
+    - target: {fileID: 2842597522256363676, guid: 51ea7b9fafed23543a638700f623a1a5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ResetScene
+      objectReference: {fileID: 0}
     - target: {fileID: 2842597523104514308, guid: 51ea7b9fafed23543a638700f623a1a5, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -1070,7 +1082,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6460096087854884506, guid: bc31c04df7ec327488475874b2fa38b8, type: 3}
       propertyPath: m_LocalScale.x
-      value: 4.6896343
+      value: 2.119678
       objectReference: {fileID: 0}
     - target: {fileID: 6460096087854884506, guid: bc31c04df7ec327488475874b2fa38b8, type: 3}
       propertyPath: m_LocalScale.y
@@ -1078,7 +1090,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6460096087854884506, guid: bc31c04df7ec327488475874b2fa38b8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.87
+      value: -1.97
       objectReference: {fileID: 0}
     - target: {fileID: 6460096087854884506, guid: bc31c04df7ec327488475874b2fa38b8, type: 3}
       propertyPath: m_LocalPosition.y
