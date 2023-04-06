@@ -22,7 +22,7 @@ public class Slingshot : MonoBehaviour
     public Collider2D pelletCollider;
 
     private UIManager _uiManager;
-    private int currentAmmo = 10;
+    public int currentAmmo = 10;
 
     // Start is called before the first frame update
     // Sets the position of the line strips
@@ -38,6 +38,7 @@ public class Slingshot : MonoBehaviour
         center.position = (stripPositions[0].position + stripPositions[1].position) / 2;
 
         _uiManager = GameObject.Find("Canvas").GetComponent<UIManager>();
+        _uiManager.UpdateAmmo (currentAmmo);
     }
 
     // Creates pellet at the slingshot
@@ -49,7 +50,7 @@ public class Slingshot : MonoBehaviour
         }
         else
         {
-            pellet = Instantiate(pelletPrefab).GetComponent<Rigidbody2D>();
+            pellet = Instantiate(pelletPrefab, transform.position, transform.rotation).GetComponent<Rigidbody2D>();
             pelletCollider = pellet.GetComponent<Collider2D>();
             pelletCollider.enabled = true;
         }
